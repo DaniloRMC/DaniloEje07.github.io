@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable</title>
+    <style>
+        .submenu {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li onclick="toggleSubmenu('submenu1')">HTML
+                <ul id="submenu1" class="submenu">
+                    <li>Definicion 1-1</li>
+                    <li>"HyperText Markup Language" (Lenguaje de Marcado de Hipertexto), es el código estándar para crear páginas web y estructurar su contenido 1-2</li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('submenu2')">CSS
+                <ul id="submenu2" class="submenu">
+                    <li>definicion 2-1</li>
+                    <li>es un lenguaje utilizado para definir la presentación visual de un documento web, principalmente escrito en HTML o XML 2-2</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
